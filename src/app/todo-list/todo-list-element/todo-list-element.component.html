@@ -1,0 +1,11 @@
+<li class="list-element" #liElement>
+  <span class="list-element-text">{{eIndex + ". "}}{{listElement}}</span>
+  <div class="functions">
+    {{eIndex + ". "}}
+    <button (click)="removeFromList(eIndex)">Delete</button>
+    <form>
+      <input placeholder="edit" #confirmInput>
+      <button (click)="confirmEdit($event, eIndex, confirmInput)">Confirm</button>
+    </form>
+  </div>
+</li>

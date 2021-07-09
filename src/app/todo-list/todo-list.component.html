@@ -1,0 +1,14 @@
+<div class="list-wrapper">
+  <p>todo-list works!</p>
+  <ul>
+    <app-todo-list-element *ngFor="let listElement of data; index as i"
+                           [listElement]="listElement"
+                           [eIndex]="i"
+                           [data]="data">
+    </app-todo-list-element>
+  </ul>
+  <form (submit)="addToList(addInput, $event)">
+    <input placeholder="Add work" #addInput>
+    <button class="addBtn">Add</button>
+  </form>
+</div>
